@@ -1,0 +1,19 @@
+
+// Body
+$body-bg: #f5f8fa;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// colors 
+$color-primary: $palette-indigo-500;
+$color-accent: $palette-pink-A200;
+ 
+$text-color-primary: rgba-tpl($color-black, 0.87);
+$text-link-color: $color-accent;
+ 
+// font 
+$preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$performance_font: 'Helvetica', 'Arial', sans-serif;

@@ -1,0 +1,295 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ .my-btn {
+ 	top: 10px;
+ 	right: 20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	padding: 7px;
+	border-radius: 50%;
+	font-size: 14px;
+ }
+ .cat-title {
+ 	margin-top: 0px;
+ }
+ .cat-row {
+ 	margin-bottom: 0px;
+ }
+ .my-card-panel {
+  padding: 5px 15px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  background-color: #fff;
+ }
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.parallax-container {
+	height: 300px;
+}
+.carousel {
+	height: 250px;
+	perspective: 700px;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.carousel .carousel-item {
+    width: 150px;
+    height: 150px;
+}
+
+#my-left-menu {
+	padding-left: 15%;
+}
+.card .card-image {
+    position: static;
+}
+.btn-floating.halfway-fab {
+    bottom: -10px;
+}
+.my-social-icon {
+	padding-left: 10px;
+}
+.mynav-social-icon {
+	padding-left: 20px;
+	padding-top: 8px;
+	float: left;
+}
+.mynav-social-icon-img {
+	padding-right: 10px;
+}
+.page-footer {
+    padding-top: 0px;
+}
+.my-menu-for-pages {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.one-sidebar {
+	line-height: 20px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.my-thumb-img {
+	top: 0;
+	left: 0;
+	float: left;
+	margin-right: 10px;
+	height: auto;
+	width: 120px;
+	border-radius: 4px;
+}
+.text-sidebar {
+	position: relative;
+	margin-left: 130px;
+	min-height: 110px;
+}
+
+.sidebar-link {
+	color: rgba(0, 0, 0, 0.60); ;
+}
+.sidebar-link:hover {
+	color: rgba(0, 0, 0, 0.87); ;
+}
+.contact {
+	padding-right: 20px;
+}
+.contact-icon {
+	padding-left: 10px;
+}
+.pusto {
+	padding-bottom: 50px;
+}
+.my-paginator {
+    width: 100%;
+	margin: 0 auto;
+}
+.my-paginator-ul {
+    display: table;
+    margin: 0 auto;
+}
+.my-paginator li {
+    float:left;
+}
+.my-img-link {
+	border-radius: 5px;
+	cursor: pointer;
+    transition: 0.3s;
+}
+.my-img-link:hover {
+	opacity: 0.8;
+}
+.my-date {
+	font-size: 0.8rem;
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.60);
+}
+#main-img {
+    border-radius: 5px;
+    /*cursor: pointer;*/
+}
+
+#main-img:hover {opacity: 0.8;}
+
+.thumb {
+	position: relative;
+	z-index: 1;
+}
+.thumb-admin {
+	max-width: 100px;
+	height: auto;
+}
+.youtube-logo {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+  	top: 0;
+  	bottom: 0;
+  	right: 0;
+ 	margin: auto;
+	max-width: 40%;
+  	height: auto;
+}
+.delete-btn {
+	position: absolute;
+	z-index: 2;
+	left: 80%;
+  	top: 0;
+  	bottom: 0;
+  	right: 0;
+  	border-radius: 10%;
+  	width: 30px;
+  	height: 30px;
+  	line-height: 30px;
+}
+.my-error {
+ 	text-align: center;
+}
+.icon_style {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: white;
+    cursor:pointer;
+}
+.delete-task {
+    background: transparent;
+    border: none;
+    color: #039be5;
+    cursor: pointer;
+    padding: 0px;
+}
+.td-in-admin {
+	vertical-align: top;
+}
+.opa-in-admin {
+	opacity: 0.5;
+}
+.admin-delete {
+	padding-top: 50%;
+}
+.admin-table {
+	max-width: 90%;
+}
+.MyTab {
+	text-indent: 3em;
+}
+.row-in-admin {
+	display: flex;
+    align-items: center;
+}
+my-nav {
+	color: #fff;
+	height: 36px;
+	line-height: 36px;
+	background-color: #7e57c2;
+	width: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+	display: block;
+	box-sizing: inherit;
+}
+my-nav.my-nav-wrapper {
+  	position: relative;
+  	height: 100%;
+}
+my-nav i.material-icons {
+	display: block;
+	font-size: 24px;
+	height: 36px;
+	line-height: 36px;
+}
+.my-input-field {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.my-nav-wrapper .input-field input[type=search] {
+	height: inherit;
+	padding-left: 4rem;
+	width: calc(100% - 4rem);
+	border: 0;
+	box-shadow: none;
+}
+my-nav .input-field label i {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+.my-clear {
+	clear: right;
+}
+
+@media only screen and (max-width: 992px) {
+	.parallax-container {
+		height: 200px;
+	}
+	.mynav-social-icon {
+		float: right;
+		padding-left: 0px;
+		padding-right: 10px;
+	}
+	.pusto {
+		padding-bottom: 0px;
+	}
+	.my-paginator-ul {
+	    margin-left: 25%;
+	}
+	li.my-small-pagination a {
+	  font-size: 1rem;
+	  padding: 0 4px;
+	}
+	.col-in-admin {
+		margin-bottom: 10px;
+	}
+	.row-in-admin {
+		display: inherit;
+	}
+	.delete-btn {
+		left: 70%;
+	  	width: 20px;
+	  	height: 20px;
+	  	line-height: 20px;
+	}
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	.hide-on-ipad {
+		display: none;
+	}
+	.row-in-admin {
+		display: flex;
+    	align-items: flex-end;
+	}
+	.my-search {
+		width: 50%;
+		float: right;
+	}
+}
