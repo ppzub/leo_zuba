@@ -21,7 +21,7 @@
 				@endforeach
 				<div class="my-paginator">{{ $news->links('layouts.paginate') }}</div>
 			</div>
-			<div class="col xl3 l3 m12 s12 my-sidebar">
+			<div class="col xl3 l3 m6 s12 my-sidebar">
 			<div class="my-card-panel green lighten-2 white-text z-depth-2">
 				<h6>shuffle відео</h6>
 			</div>

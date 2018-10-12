@@ -6,13 +6,13 @@
 					<div class="my-card-panel green lighten-2 white-text z-depth-2">
 						<h6>{{ $cat->title }}: відео</h6>
 					</div>
-					@php($j = 2)
+					@php($j = 1)
 					@php($i = 0)
 					@foreach ($video_data[$k] as $video)
-						@if(($i == 0) || ($i%3 == 0))
+						@if(($i == 0) || ($i%2 == 0))
 							<div class="row">
 						@endif
-						<div class="col xl4 l4 m4 s4 thumb">
+						<div class="col xl6 l6 m6 s6 thumb">
 							<span class="cat-title grey-text text-darken-2">{{$video['title']}}</span>
 								<a class="lightBoxVideoLink" href="https://www.youtube.com/embed/{{$video['id']}}?autoplay=true">
 									<img id="main-img" class="responsive-img" src="{{$video['thumb']}}">
@@ -21,7 +21,7 @@
 						</div>
 
 						@if (($i == $j) || ($i == count($video_data[$k]) - 1))
-							@php($j = $j + 3)
+							@php($j+=2)
 								</div>
 						@endif
 					@php($i++)
