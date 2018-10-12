@@ -3,7 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta property="fb:app_id" content="290902154820737" />
+  <meta property="fb:admins" content="100012346004318"/>
+  <meta property="fb:admins" content="100002126122068"/>
 
   <title>kazka agency</title>
 
