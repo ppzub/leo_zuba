@@ -28,4 +28,5 @@
 	    </div>
 	</div>
 	@endif
-	<div class="fb-comments" data-href="{{env('APP_URL')}}/news/{{$post->id}}" data-width="100%" data-numposts="5"></div>
+	<div class="fb-comments" data-href="{{env('APP_URL')}}/news/{{$post->id}}" data-numposts="5"
+		data-colorscheme="light" data-mobile="true" data-order-by="reverse_time"></div>

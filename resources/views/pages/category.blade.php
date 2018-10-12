@@ -98,6 +98,7 @@
 			@endif
 		</div>
 		@endif
-		<div class="fb-comments" data-href="{{env('APP_URL')}}/{{$cat->alias}}" data-width="100%" data-numposts="5"></div>
+		<div class="fb-comments" data-href="{{env('APP_URL')}}/{{$cat->alias}}" data-numposts="5"
+				data-colorscheme="light" data-mobile="true" data-order-by="reverse_time"></div>
 	</div>
 </div>
