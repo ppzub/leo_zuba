@@ -5,8 +5,8 @@
 		</div>
 		<div class="row">
 				<div class="col xl4 l4 m4 s4">
-					<a href="{{$cat->getImage($cat->image)->large}}" class="imageSingle">
-			    		<img id="main-img" class="responsive-img" src="{{$cat->getImage($cat->image)->medium}}">
+					<a href="{{$cat->getImage()->large}}" class="imageSingle">
+			    		<img id="main-img" class="responsive-img" src="{{$cat->getImage()->medium}}">
 					</a>
 		  		</div>
 				<div class="col xl8 l8 m8 s8">

@@ -1,6 +1,8 @@
 @include('layouts.menu-with-logo')
 @if (isset($news) && isset($sidebar_video_data))
 	@include('pages.news')
+@elseif (isset($cats) && isset($posts) && isset($sidebar_video_data))
+	@include('pages.search')
 @else
 	<div class="container">
 		<div class="row">

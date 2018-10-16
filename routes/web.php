@@ -48,6 +48,7 @@ Route::prefix('admin')->namespace('Admin')->middleware('admin')->group(function(
 
 
 Route::get('/', 'MainController@index')->name('index');
+Route::get('/search', 'MainController@search')->name('search');
 Route::get('/news/{id}', 'MainController@post')->name('post.show');
 Route::get('/news', 'MainController@news')->name('news.show');
 Route::get('/videos', 'MediaController@videos')->name('videos.show');

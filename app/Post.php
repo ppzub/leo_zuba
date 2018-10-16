@@ -4,6 +4,7 @@ namespace Kazka;
 use Carbon\Carbon;
 use Jenssegers\Date\Date;
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 use Kazka\Traits\Youtube;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
@@ -12,8 +13,9 @@ use DB;
 class Post extends Model
 {
     use Youtube;
+    use Eloquence;
     protected $fillable = ['content', 'category_id', 'image', 'video', 'created_at', 'updated_at'];
-
+    protected $searchableColumns = ['content' => 5];
 
     public function category()
     {

@@ -41,8 +41,8 @@
             <div class="row">
             	<div class="col xl6 l6 m6 s12">
             		@if($cat->image)
-            		<a href="{{$cat->getImage($cat->image)->large}}" class="imageSingle">
-						<img class="responsive-img my-thumb-img" src="{{$cat->getImage($cat->image)->small}}">
+            		<a href="{{$cat->getImage()->large}}" class="imageSingle">
+						<img class="responsive-img my-thumb-img" src="{{$cat->getImage()->small}}">
 					</a>
 					@endif
             	</div>

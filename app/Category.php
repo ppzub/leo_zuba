@@ -3,12 +3,15 @@
 namespace Kazka;
 
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 use Kazka\Category;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 class Category extends Model
 {
+    use Eloquence;
 	protected $fillable = ['title', 'content', 'image'];
+    protected $searchableColumns = ['title' => 20, 'content' => 10];
 
     public function posts()
     {
@@ -93,10 +96,10 @@ class Category extends Model
         }
         return $obj;
     }
-    public function getImage($image)
+    public function getImage()
     {
         $obj = new \stdClass;
-        if ($image == null)
+        if ($this->image == null)
         {
             $obj->small = '/images/small/default_small.png';
             $obj->medium = '/images/medium/default_medium.png';
@@ -105,7 +108,7 @@ class Category extends Model
         }
         else
         {
-            $image = json_decode($image);
+            $image = json_decode($this->image);
             $obj->small = '/img/category/small/'.$image->small;
             $obj->medium = '/img/category/medium/'.$image->medium;
             $obj->large = '/img/category/large/'.$image->large;

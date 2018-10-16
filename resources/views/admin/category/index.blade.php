@@ -39,8 +39,8 @@
                   </td>
                   <td  class="td-in-admin">
                   @if($cat->image)
-                  <a href="{{$cat->getImage($cat->image)->large}}" class="imageSingle">
-	                 <img id="main-img" src="{{ $cat->getImage($cat->image)->small }}" class="thumb-admin">
+                  <a href="{{$cat->getImage()->large}}" class="imageSingle">
+	                 <img id="main-img" src="{{ $cat->getImage()->small }}" class="thumb-admin">
                   </a>
                   @endif
                   </td>

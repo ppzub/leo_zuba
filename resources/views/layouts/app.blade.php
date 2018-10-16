@@ -25,14 +25,14 @@
 <!-- Search bar for mobile -->
       <my-nav class="col m6 s12 hide-on-large-only my-search">
         <div class="my-nav-wrapper green lighten-2">
-          <form>
-            <div class="input-field my-input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </div>
+            <form method="GET" action="{{route('search')}}">
+              <div class="input-field my-input-field">
+                <input name="key" id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
       </my-nav>
 <!-- END Search bar for mobile -->
 

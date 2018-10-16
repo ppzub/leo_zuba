@@ -24,9 +24,9 @@
       <div class="col xl3 l3 hide-on-med-and-down">
         <my-nav>
           <div class="my-nav-wrapper green lighten-2">
-            <form>
+            <form method="GET" action="{{route('search')}}">
               <div class="input-field my-input-field">
-                <input id="search" type="search" required>
+                <input name="key" id="search" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
               </div>

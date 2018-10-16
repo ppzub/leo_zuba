@@ -2,24 +2,38 @@
 		<div class="row">
 			<div class="col xl9 l9 m12 s12">
 				<div class="my-card-panel green lighten-2 white-text z-depth-2">
-					<h6>Новини</h6>
+					<h6>Результати пошуку</h6>
 				</div>
-				@foreach($news as $new)
+				@foreach($cats as $cat)
 				<div class="row">
 
 					<div class="col xl4 l4 m4 s5">
-						<a class="my-img-link" href="{{route('post.show', $new->id)}}">
-				    		<img class="responsive-img my-img-link" src="{{$new->getImage()->medium}}">
+						<a class="my-img-link" href="{{route('cat.show', $cat->alias)}}">
+				    		<img class="responsive-img my-img-link" src="{{$cat->getImage()->medium}}">
 				    	</a>
 			  		</div>
 
 					<div class="col xl8 l8 m8 s7">
-						{{ substr($new->content, 0, 80) }}...
-						<div class="my-date">{{$new->getDate()}}</div>
+						<div class="my-title">{{$cat->title}}</div>
+						{{ substr($cat->content, 0, 80) }}...
 					</div>
 				</div>
 				@endforeach
-				<div class="my-paginator">{{ $news->links('layouts.paginate') }}</div>
+				@foreach($posts as $post)
+				<div class="row">
+
+					<div class="col xl4 l4 m4 s5">
+						<a class="my-img-link" href="{{route('post.show', $post->id)}}">
+				    		<img class="responsive-img my-img-link" src="{{$post->getImage()->medium}}">
+				    	</a>
+			  		</div>
+
+					<div class="col xl8 l8 m8 s7">
+						{{ substr($post->content, 0, 80) }}...
+						<div class="my-date">{{$post->getDate()}}</div>
+					</div>
+				</div>
+				@endforeach
 			</div>
 			<div class="col xl3 l3 m6 s12 my-sidebar">
 			<div class="my-card-panel green lighten-2 white-text z-depth-2">

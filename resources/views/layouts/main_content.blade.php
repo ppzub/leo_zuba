@@ -14,4 +14,6 @@
 	@include('pages.cat-images-show')
 @elseif(isset($reviews))
 	@include('pages.reviews')
+@elseif(isset($cats) && isset($posts))
+	@include('pages.search')
 @endif

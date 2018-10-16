@@ -44,6 +44,35 @@ class MainController extends Controller
     public function news()
     {
         $news = Post::orderBy('id', 'desc')->paginate(5);
+        $sidebar_video_data = $this->getVideosSidebar();
+        return view('layouts.site')->with([
+            'news' => $news,
+            'sidebar_video_data' => $sidebar_video_data
+        ]);
+    }
+    /**
+     * Відображення сторінки відгуки
+     */
+    public function reviews()
+    {
+        $reviews = 'Відгуки';
+        $reviews_content = view('layouts.main_content')->with('reviews', $reviews)->render();
+        Post::setSidebarForReviewsContent();
+        return view('layouts.site')->with('main_content', $reviews_content);
+    }
+    public function search(Request $request)
+    {
+        $posts = Post::search($request->key)->get();
+        $cats = Category::search($request->key)->get();
+        $sidebar_video_data = $this->getVideosSidebar();
+        return view('layouts.site')->with([
+            'cats' => $cats,
+            'posts' => $posts,
+            'sidebar_video_data' => $sidebar_video_data
+        ]);
+    }
+    public function getVideosSidebar ()
+    {
         $videos = Post::pluck('video');
         $sidebar_video_data = array();
         foreach ($videos as $key => $value)
@@ -64,19 +93,6 @@ class MainController extends Controller
             $sidebar_video_data[$i]['thumb'] = 'http://img.youtube.com/vi/'.$videos[$i].'/0.jpg';
             $sidebar_video_data[$i]['title'] = $this->youtube_title($videos[$i]);
         }
-        return view('layouts.site')->with([
-            'news' => $news,
-            'sidebar_video_data' => $sidebar_video_data
-        ]);
-    }
-    /**
-     * Відображення сторінки відгуки
-     */
-    public function reviews()
-    {
-        $reviews = 'Відгуки';
-        $reviews_content = view('layouts.main_content')->with('reviews', $reviews)->render();
-        Post::setSidebarForReviewsContent();
-        return view('layouts.site')->with('main_content', $reviews_content);
+        return $sidebar_video_data;
     }
 }
