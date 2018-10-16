@@ -64,10 +64,13 @@ class MainController extends Controller
     {
         $posts = Post::search($request->key)->get();
         $cats = Category::search($request->key)->get();
+        $count = count($cats) + count($posts);
+
         $sidebar_video_data = $this->getVideosSidebar();
         return view('layouts.site')->with([
             'cats' => $cats,
             'posts' => $posts,
+            'count' => $count,
             'sidebar_video_data' => $sidebar_video_data
         ]);
     }
