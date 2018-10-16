@@ -23,7 +23,7 @@
 @yield('header')
 <!-- END NAVBAR -->
 <!-- Search bar for mobile -->
-      <my-nav class="col m6 s12 hide-on-large-only my-search">
+      <my-nav class="col m6 s12 hide-on-large-only my-search {{(Auth::check())? 'hide' : ''}}">
         <div class="my-nav-wrapper green lighten-2">
             <form method="GET" action="{{route('search')}}">
               <div class="input-field my-input-field">
@@ -35,7 +35,6 @@
           </div>
       </my-nav>
 <!-- END Search bar for mobile -->
-
 @if((Auth::check()) && (Auth::user()->is_admin))
   <div class="row">
     <div class="col xl12 l12 m12 s12">

@@ -38,6 +38,7 @@ Route::prefix('producer')->group(function() {
 
 Route::prefix('admin')->namespace('Admin')->middleware('admin')->group(function() {
 	Route::get('/','DashboardController@index')->name('admin');
+	Route::get('/search','DashboardController@search')->name('admin.search');
 	Route::get('/category','DashboardController@edit_category_show')->name('edit.category.show');
 	Route::resource('/posts','PostsController');
 	Route::resource('/posts/gallery', 'GalleryController')->only(['edit', 'update', 'destroy']);

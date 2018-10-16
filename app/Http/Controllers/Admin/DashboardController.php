@@ -14,13 +14,21 @@ class DashboardController extends Controller
      */
     public function index()
     {
-    	$posts = Post::orderBy('id', 'desc')->paginate(10);
+
         $cats = Category::orderBy('id')->get();
+        $posts = Post::orderBy('id', 'desc')->paginate(10);
         return view('admin.index', compact('posts', 'cats'));
     }
     public function edit_category_show()
     {
     	$cats = Category::orderBy('id')->get();
         return view('admin.category.index')->with('cats', $cats);
+    }
+    public function search(Request $request)
+    {
+        $cats = Category::orderBy('id')->get();
+        $posts = Post::search($request->key)->orderBy('id', 'desc')->paginate(10);
+        $count = count($posts);
+        return view('admin.index', compact('posts', 'cats', 'count'));
     }
 }

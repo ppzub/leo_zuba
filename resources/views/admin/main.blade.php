@@ -20,21 +20,26 @@
     </div>
 		<div class="col xl4 l4 m6 s12">
       <my-nav>
-		    <div class="my-nav-wrapper green lighten-2">
-		      <form>
-		        <div class="input-field my-input-field">
-		          <input id="search" type="search" required>
-		          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-		          <i class="material-icons">close</i>
-		        </div>
-		      </form>
-		    </div>
+        <div class="my-nav-wrapper green lighten-2">
+            <form method="GET" action="{{route('admin.search')}}">
+              <div class="input-field my-input-field">
+                <input name="key" id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
       </my-nav>
 		</div>
 
 	</div>
 
 	<div class="row admin-table">
+@if(isset($count) && ($count == 0))
+  <div class="col xl12 l12 m12 s12 center">
+    <h5>Нічого не знайдено</h5>
+  </div>
+@else
 	<table>
                 <thead>
                 <tr>
@@ -103,5 +108,6 @@
 
 		          <div class="my-paginator">{{ $posts->links('layouts.paginate') }}</div>
               @endif
+@endif
 	</div>
 </div>
