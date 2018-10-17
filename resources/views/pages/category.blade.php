@@ -88,7 +88,7 @@
 							<span class="cat-title grey-text text-darken-2">{{$cat_video_data[$i]['title']}}</span>
 								<a class="lightBoxVideoLink" href="https://www.youtube.com/embed/{{$cat_video_data[$i]['id']}}?autoplay=true">
 									<img id="main-img" class="responsive-img" src="{{$cat_video_data[$i]['thumb']}}">
-									<img class="youtube-logo" src="{{asset('img')}}/yt_logo_mono_dark.png">
+									<img class="youtube-logo youtube-logo-mobile" src="{{asset('img')}}/yt_logo_mono_dark.png">
 								</a>
 						</div>
 					@if(($i == 1) && (count($cat_video_data) > 2))
