@@ -6,8 +6,22 @@
   <meta property="fb:admins" content="100012346004318"/>
   <meta property="fb:admins" content="100002126122068"/>
 
-  <title>kazka agency</title>
+  <meta itemprop="name" content="kazka agency - огранізація весілля"/>
+  <meta itemprop="description" content="В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка"/>
+  <meta itemprop="image" content="{{asset('images/small')}}/default_small.png"/>
 
+  <meta property="place:location:latitude" content="50.755791"/>
+  <meta property="place:location:longitude" content="25.353069"/>
+  <meta property="business:contact_data:locality" content="Луцьк"/>
+  <meta property="business:contact_data:postal_code" content="43000"/>
+  <meta property="business:contact_data:country_name" content="Україна"/>
+  <meta property="business:contact_data:email" content="jenya_veryhappy@ukr.net"/>
+  <meta property="business:contact_data:phone_number" content="095-332-78-75"/>
+  <meta property="business:contact_data:website" content="{{route('index')}}"/>
+
+
+  {!! SEOMeta::generate() !!}
+  {!! OpenGraph::generate() !!}
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{asset('/css')}}/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>

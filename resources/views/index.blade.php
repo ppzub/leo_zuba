@@ -4,8 +4,9 @@
   @include('layouts.header')
 @endsection
 
-@section('content')
 
+
+@section('content')
 <!-- START ВЕСІЛЛЯ ПІД КЛЮЧ -->
 @include('index.vesillia')
 <!-- END ВЕСІЛЛЯ ПІД КЛЮЧ -->

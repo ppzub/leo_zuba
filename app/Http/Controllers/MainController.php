@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Kazka\Post;
 use Kazka\Category;
 use Kazka\Traits\Youtube;
+use SEOMeta;
+use OpenGraph;
 
 class MainController extends Controller
 {
@@ -13,6 +15,19 @@ class MainController extends Controller
 
     public function index()
     {
+        SEOMeta::setTitle('kazka agency - огранізація весілля');
+        SEOMeta::setDescription('В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка');
+        SEOMeta::setKeywords(['весілля', 'музика', 'ведучий', 'декор', 'фото', 'відео']);
+        SEOMeta::setCanonical(route('index'));
+
+        OpenGraph::setTitle('kazka agency - огранізація весілля'); // define title
+        OpenGraph::setDescription('В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка');  // define description
+        OpenGraph::setUrl(route('index')); // define url
+        OpenGraph::setSiteName('kazka agency'); //define site_name
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addProperty('locale', 'uk_UA');
+        OpenGraph::addImage(asset('images/medium') . '/default_medium.png');
+
         return view('index');
     }
     /**
@@ -29,6 +44,22 @@ class MainController extends Controller
         $post_video_data['thumb'] = 'http://img.youtube.com/vi/'.$post->video.'/0.jpg';
         $post_video_data['title'] = $this->youtube_title($post->video);
 
+        //SEO
+        SEOMeta::setTitle('Новини kazka agency - '. $post->category->title);
+        SEOMeta::setDescription($post->content);
+        SEOMeta::setCanonical(route('post.show', $id));
+        SEOMeta::addKeyword($post->category->title);
+        SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:section', $post->category->title, 'property');
+
+        OpenGraph::setTitle('Новини kazka agency - '. $post->category->title);; // define title
+        OpenGraph::setDescription($post->content);  // define description
+        OpenGraph::setUrl(route('post.show', $id)); // define url
+        OpenGraph::setSiteName('kazka agency'); //define site_name
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'uk_UA');
+        OpenGraph::addImage(route('index').$post->getImage()->medium);
+        //END SEO
         $post_content = view('layouts.main_content')->with(compact('post', 'post_video_data', 'pics'))->render();
 
         $sidebar_posts = Post::whereNotIn('id', [$id])->orderBy('id', 'desc')->take(5)->get();
@@ -36,6 +67,8 @@ class MainController extends Controller
         view()->composer('layouts.sidebar', function ($view) use($sidebar_posts){
             $view->with('sidebar_posts', $sidebar_posts);
         });
+
+
         return view('layouts.site')->with('main_content', $post_content);
     }
     /**

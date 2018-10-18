@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Kazka\Post;
 use Kazka\Category;
 use Kazka\Traits\Youtube;
+use SEOMeta;
+use OpenGraph;
 class CategoryController extends Controller
 {
     use Youtube;
@@ -14,6 +16,53 @@ class CategoryController extends Controller
     public function cat($alias)
     {
     	$cat = Category::where('alias', $alias)->firstOrFail(); // достаєм з бази категорію
+
+        //SEO
+        SEOMeta::setTitle($cat->title . ' | kazka agency');
+        SEOMeta::setDescription($cat->content);
+        SEOMeta::setCanonical(route('cat.show', $cat->alias));
+        if($cat->alias == 'davnia-kazka')
+        {
+            SEOMeta::setKeywords(['гурт', 'музика', 'луцьк', 'фольк', 'казкарок', 'пісня']);
+        }
+        else if($cat->alias == 'gulianka-live-band')
+        {
+            SEOMeta::setKeywords(['кавер-гурт', 'музика', 'луцьк', 'паб', 'корпоратив', 'дискотека']);
+        }
+        else if($cat->alias == 'guilanka-live-and-minus')
+        {
+            SEOMeta::setKeywords(['весілля', 'музика', 'Луцьк', 'Львів', 'Івано-Франківськ', 'Тернопіль']);
+        }
+        else if($cat->alias == 'mc-uzvar')
+        {
+            SEOMeta::setKeywords(['весілля', 'ведучий', 'Луцьк', 'Львів', 'Івано-Франківськ', 'Тернопіль']);
+        }
+        else if($cat->alias == 'liberta')
+        {
+            SEOMeta::setKeywords(['весілля', 'шоу-балет', 'перший', 'танець', 'корпоратив']);
+        }
+        else if($cat->alias == 'dzi-r-dzio')
+        {
+            SEOMeta::setKeywords(['дзідзьо', 'пародист', 'Луцьк', 'Львів', 'Івано-Франківськ', 'Тернопіль']);
+        }
+        else if($cat->alias == 'sax')
+        {
+            SEOMeta::setKeywords(['саксофон', 'музика', 'корпоратив', 'весілля', 'свято', 'Луцьк']);
+        }
+        else if($cat->alias == 'dj')
+        {
+            SEOMeta::setKeywords(['dj', 'музика', 'корпоратив', 'весілля', 'Луцьк']);
+        }
+
+        OpenGraph::setTitle($cat->title . ' | kazka agency'); // define title
+        OpenGraph::setDescription($cat->content);  // define description
+        OpenGraph::setUrl(route('cat.show', $cat->alias)); // define url
+        OpenGraph::setSiteName('kazka agency'); //define site_name
+        OpenGraph::addProperty('type', 'category');
+        OpenGraph::addProperty('locale', 'uk_UA');
+        OpenGraph::addImage(route('index').$cat->getImage()->medium);
+        //END SEO
+
     	$cat_news = $cat->getNewsForCategory(); // формуєм записи, що стосуються категорії
     	$cat_news = $cat_news->reverse();
     	$cat_videos = $cat->getVideosForCategory(); // формуєм відоси, що стосуються категорії

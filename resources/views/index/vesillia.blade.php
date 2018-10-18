@@ -1,3 +1,4 @@
+<h1 class="hide">Весільне агенство</h1>
 <div class="container my-clear">
     <div class="row valign-wrapper my-menu-for-pages">
       <div class="col xl9 l9 m12 s12">
