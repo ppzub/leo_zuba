@@ -29,7 +29,7 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'kazka agency - огранізація весілля', // set false to total remove
+            'title'       => 'kazka agency - все для вашого свята', // set false to total remove
             'description' => 'В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'website',

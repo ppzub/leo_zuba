@@ -1,4 +1,4 @@
-<h1 class="hide">Весільне агенство</h1>
+<h1 class="hide">музика на весілля</h1>
 <div class="container my-clear">
     <div class="row valign-wrapper my-menu-for-pages">
       <div class="col xl9 l9 m12 s12">
@@ -12,7 +12,7 @@
             <div class="collapsible-body">
               <span>
               Ведучий від KaZка Agency - Назар Пивоварський @nazarok91</br>
-              Музика - запальний гурт <a href="https://www.facebook.com/groups/gulianka/">ГуляNка</a></br>
+              Музика - запальний гурт <a href="https://www.facebook.com/groups/gulianka/">ГуляNка Live&minus</a></br>
               Декор від творчої майстерні <a href="https://www.facebook.com/tatiana.sarapin">Вузлик</a> @tatiana_vuzlik</br>
               Фото та лавсторі від студії <a href="https://www.facebook.com/YakovlievVM">Emotion Moment</a> @v_yakovliev</br>
               Відео від студії <a href="https://www.facebook.com/royalwed.studio">RoyalWed</a> @royalwed_studio</br>

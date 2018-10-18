@@ -11,6 +11,6 @@
           <a class="carousel-item" href="/mc-uzvar"><img src="{{asset('img')}}/2-veduchyi.png">
             <span >Ведучий<br>Назар Пивоварський</span></a>
           <a class="carousel-item" href="/sax"><img src="{{asset('img')}}/6-sax.png">
-            <span >Саксофон<br>на Ваше свято</span></a>
+            <span >Саксофон<br>на ваше свято</span></a>
         </div>
     </div>

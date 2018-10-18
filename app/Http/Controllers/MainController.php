@@ -15,12 +15,12 @@ class MainController extends Controller
 
     public function index()
     {
-        SEOMeta::setTitle('kazka agency - огранізація весілля');
+        SEOMeta::setTitle('kazka agency - все для вашого свята');
         SEOMeta::setDescription('В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка');
         SEOMeta::setKeywords(['весілля', 'музика', 'ведучий', 'декор', 'фото', 'відео']);
         SEOMeta::setCanonical(route('index'));
 
-        OpenGraph::setTitle('kazka agency - огранізація весілля'); // define title
+        OpenGraph::setTitle('kazka agency - все для вашого свята'); // define title
         OpenGraph::setDescription('В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка');  // define description
         OpenGraph::setUrl(route('index')); // define url
         OpenGraph::setSiteName('kazka agency'); //define site_name

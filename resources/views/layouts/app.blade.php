@@ -6,7 +6,7 @@
   <meta property="fb:admins" content="100012346004318"/>
   <meta property="fb:admins" content="100002126122068"/>
 
-  <meta itemprop="name" content="kazka agency - огранізація весілля"/>
+  <meta itemprop="name" content="kazka agency - музика на весілля"/>
   <meta itemprop="description" content="В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка"/>
   <meta itemprop="image" content="{{asset('images/small')}}/default_small.png"/>
 
