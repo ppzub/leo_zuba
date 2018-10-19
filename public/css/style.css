@@ -311,4 +311,14 @@ my-nav .input-field label i {
 	.youtube-logo-mobile {
 		top: 0;
 	}
+	.carousel {
+		height: 200px;
+	}
+	.carousel .carousel-item {
+	    width: 125px;
+	    height: 125px;
+	}
+	.span-mobile {
+		font-size: 12px;
+	}
 }
