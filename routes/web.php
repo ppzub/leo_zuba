@@ -59,3 +59,4 @@ Route::get('/{alias}', 'CategoryController@cat')->name('cat.show');
 Route::get('/{alias}/news', 'CategoryController@news')->name('cat.news.show');
 Route::get('/{alias}/videos', 'CategoryController@videos')->name('cat.videos.show');
 Route::get('/{alias}/images', 'CategoryController@images')->name('cat.images.show');
+

@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /
+#Disallow: /admin
+#Disallow: /search
+#Disallow: /producer
+#Sitemap: http://kazka.my/sitemap.xml

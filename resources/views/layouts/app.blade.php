@@ -19,9 +19,9 @@
   <meta property="business:contact_data:phone_number" content="095-332-78-75"/>
   <meta property="business:contact_data:website" content="{{route('index')}}"/>
 
-
   {!! SEOMeta::generate() !!}
   {!! OpenGraph::generate() !!}
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{asset('/css')}}/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
