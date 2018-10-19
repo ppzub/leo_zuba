@@ -14,7 +14,7 @@
 								<div class="row">
 							@endif
 							<div class="col s6 thumb">
-								<span class="cat-title grey-text text-darken-2">{{$video['title']}}</span>
+								<span class="cat-title grey-text text-darken-2 span-mobile">{{$video['title']}}</span>
 									<a class="lightBoxVideoLink" href="https://www.youtube.com/embed/{{$video['id']}}?autoplay=true">
 										<img id="main-img" class="responsive-img" src="{{$video['thumb']}}">
 										<img class="youtube-logo youtube-logo-mobile" src="{{asset('img')}}/yt_logo_mono_dark.png">

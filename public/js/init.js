@@ -5,8 +5,9 @@
 	$('.parallax').parallax();
 	$('.collapsible').collapsible();
 	$('.carousel').carousel({
-		padding: 60,
-
+		padding: 20,
+		dist: -50,
+		numVisible: 6,
 	});
 	$( '.my-hover' ).mouseover(function() {
   		$( this ).addClass('green lighten-2 white-text');

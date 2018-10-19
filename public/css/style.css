@@ -41,7 +41,7 @@
 	height: 250px;
 	perspective: 700px;
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 .carousel .carousel-item {
     width: 150px;
@@ -251,7 +251,6 @@ my-nav .input-field label i {
 .my-clear {
 	clear: right;
 }
-
 @media only screen and (max-width: 992px) {
 	.parallax-container {
 		height: 200px;
@@ -282,6 +281,19 @@ my-nav .input-field label i {
 	}
 	.youtube-logo-mobile {
 		top: 15%;
+	}
+	.carousel {
+		height: 170px;
+	}
+	.carousel .carousel-item {
+	    width: 95px;
+	    height: 95px;
+	}
+	.span-mobile {
+		font-size: 11px;
+	}
+	.my-menu-for-pages {
+		margin-top: 0px;
 	}
 }
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
