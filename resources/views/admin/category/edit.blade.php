@@ -54,7 +54,7 @@
 				    	<input type="file" name="image" id="image">
 				    </div>
 					<div class="file-path-wrapper">
-					   	<input class="file-path validate grey-text text-lighten" type="text" value="Змінити картінку категорії">
+					   	<input class="file-path validate grey-text text-lighten" type="text" value="Картінка категорії">
 					</div>
 
 			    </div>

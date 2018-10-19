@@ -99,6 +99,7 @@
 			@endif
 		</div>
 		@endif
+		<div class="fb-like" data-href="{{env('APP_URL')}}/{{$cat->alias}}" data-width="50" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" data-colorscheme="light"></div>
 		<div class="fb-comments" data-href="{{env('APP_URL')}}/{{$cat->alias}}" data-numposts="5"
 				data-colorscheme="light" data-mobile="true" data-order-by="reverse_time"></div>
 	</div>
