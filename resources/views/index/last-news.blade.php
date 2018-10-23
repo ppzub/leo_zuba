@@ -10,7 +10,7 @@
                   <a href="{{route('post.show', $post->id)}}" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">more_horiz</i></a>
                 </div>
                 <div class="card-content">
-                  <p>{{ substr($post->content, 0, 60) }}...</p>
+                  <p>{{ mb_substr($post->content, 0, 60) }}...</p>
                 </div>
               </div>
             </div>

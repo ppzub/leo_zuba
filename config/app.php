@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://kazka-agency.zzz.com.ua'),
+    'url' => env('APP_URL', 'http://kazka.my'),
 
     /*
     |--------------------------------------------------------------------------
