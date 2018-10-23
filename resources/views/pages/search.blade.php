@@ -23,7 +23,7 @@
 
 							<div class="col xl8 l8 m8 s7">
 								<div class="my-title">{{$cat->title}}</div>
-								{{ substr($cat->content, 0, 80) }}...
+								{{ mb_substr($cat->content, 0, 80) }}...
 							</div>
 						</div>
 						@endforeach
@@ -39,7 +39,7 @@
 					  		</div>
 
 							<div class="col xl8 l8 m8 s7">
-								{{ substr($post->content, 0, 80) }}...
+								{{ mb_substr($post->content, 0, 80) }}...
 								<div class="my-date">{{$post->getDate()}}</div>
 							</div>
 						</div>
