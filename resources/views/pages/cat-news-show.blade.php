@@ -14,7 +14,7 @@
 			  		</div>
 
 					<div class="col xl8 l8 m8 s7">
-						{{$new->content}}
+						{{ mb_substr($new->content, 0, 80) }}...
 						<div class="my-date">{{$new->getDate()}}</div>
 					</div>
 				</div>

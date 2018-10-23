@@ -25,7 +25,7 @@
 				    </a>
 					</div>
 					<div class="col xl8 l8 m8 s8">
-						{{$post->content}}
+						{{ mb_substr($post->content, 0, 80) }}...
 					</div>
 				@endforeach
 			@elseif(count($cat_news) == 2)
@@ -34,7 +34,7 @@
 						<a class="my-img-link" href="{{route('post.show', $post->id)}}">
 				    		<img class="responsive-img my-img-link" src="{{$post->getImage()->medium}}">
 				    	</a>
-						{{$post->content}}
+						{{ mb_substr($post->content, 0, 80) }}...
 					</div>
 				@endforeach
 			@else
@@ -47,7 +47,7 @@
 						<a class="my-img-link" href="{{route('post.show', $post->id)}}">
 				    		<img class="responsive-img my-img-link" src="{{$post->getImage()->medium}}">
 				    	</a>
-						{{$post->content}}
+						{{ mb_substr($post->content, 0, 80) }}...
 					</div>
 				@if(($i == 2) && (count($cat_news) > 3))
 					<a href="{{route('cat.news.show', $cat->alias)}}" class="my-btn right z-depth-2 deep-purple lighten-2 white-text waves-effect waves-purple "><i class="material-icons">chevron_right</i></a>

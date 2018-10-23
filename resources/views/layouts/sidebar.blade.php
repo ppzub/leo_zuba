@@ -6,7 +6,7 @@
 				<img class="responsive-img my-thumb-img" src="{{$post->getImage()->small}}">
 			@endif
 			<div class="text-sidebar">
-				<div>{{ substr($post->content, 0, 40) }}...</div>
+				<div>{{ mb_substr($post->content, 0, 50) }}...</div>
 				<div class="my-date">{{$post->getDate()}}</div>
 			</div>
 		</div>

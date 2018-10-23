@@ -76,7 +76,7 @@ class MainController extends Controller
      */
     public function news()
     {
-        $news = Post::orderBy('id', 'desc')->paginate(5);
+        $news = Post::orderBy('id', 'desc')->paginate(10);
         $sidebar_video_data = $this->getVideosSidebar();
         return view('layouts.site')->with([
             'news' => $news,

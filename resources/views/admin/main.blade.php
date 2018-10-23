@@ -58,7 +58,7 @@
                   <td class="td-in-admin">{{ $post->id }}</td>
                   <td class="td-in-admin">
                     <a href="{{ route('posts.edit', $post->id) }}">
-                      {{ substr($post->content, 0, 20) }}...
+                      {{ mb_substr($post->content, 0, 20) }}...
                     </a>
                   </td>
                   @if ($post->category)
