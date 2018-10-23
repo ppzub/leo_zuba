@@ -211,7 +211,10 @@
     align-items: center;
 }
 .sidenav li a.color-in-mobile {
-	color: rgb(3, 155, 229);
+	color: #039be5;
+}
+.sidenav li a.color-in-mobile2 {
+	color: #616161;
 }
 my-nav {
 	color: #fff;
