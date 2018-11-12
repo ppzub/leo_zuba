@@ -3,7 +3,7 @@
 
 			@foreach ($media as $k => $cat)
 				@if (!$cat->posts->isEmpty())
-					<div class="my-card-panel green lighten-2 white-text z-depth-2">
+					<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 						<h6>{{ $cat->title }}: відео</h6>
 					</div>
 					<div class="hide-on-med-and-up">

@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col xl12 l12 m12 s12 imageGallery">
 		@if($cat_images_show)
-		<div class="my-card-panel green lighten-2 white-text z-depth-2">
+		<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 			<h6>{{ $cat->title }}: світлини</h6>
 		</div>
 			@for($i=0, $j=2; $i<count($cat_images_show); $i++)

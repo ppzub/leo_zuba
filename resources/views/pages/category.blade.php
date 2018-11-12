@@ -1,7 +1,7 @@
 <div class="row">
 	<h1 class="hide">{{ $cat->title }}</h1>
 	<div class="col xl12 l12 m12 s12">
-		<div class="my-card-panel green lighten-2 white-text z-depth-2">
+		<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 			<h6>{{ $cat->title }}</h6>
 		</div>
 		<div class="row">

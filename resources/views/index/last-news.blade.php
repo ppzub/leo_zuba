@@ -7,7 +7,7 @@
               <div class="card small">
                 <div class="card-image">
                   <img class="responsive-img" src="{{$post->getImage()->medium}}">
-                  <a href="{{route('post.show', $post->id)}}" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">more_horiz</i></a>
+                  <a href="{{route('post.show', $post->id)}}" class="btn-floating halfway-fab waves-effect waves-purple deep-purple lighten-2"><i class="material-icons">more_horiz</i></a>
                 </div>
                 <div class="card-content">
                   <p>{{ mb_substr($post->content, 0, 60) }}...</p>

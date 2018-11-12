@@ -1,4 +1,4 @@
-<div class="my-card-panel green lighten-2 white-text z-depth-2">
+<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 	<h6>{{$post->category->title}}</h6>
 </div>
 <span class="my-date">{{$post->getDate()}}</span>

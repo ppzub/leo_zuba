@@ -20,7 +20,7 @@
     </div>
 		<div class="col xl4 l4 m6 s12">
       <my-nav>
-        <div class="my-nav-wrapper green lighten-2">
+        <div class="my-nav-wrapper deep-purple lighten-2">
             <form method="GET" action="{{route('admin.search')}}">
               <div class="input-field my-input-field">
                 <input name="key" id="search" type="search" required>

@@ -1,7 +1,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col xl9 l9 m12 s12">
-				<div class="my-card-panel green lighten-2 white-text z-depth-2">
+				<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 					<h6>Результати пошуку: {{$count}}</h6>
 				</div>
 					@if($count == 0)
@@ -47,7 +47,7 @@
 					@endif
 			</div>
 			<div class="col xl3 l3 m6 s12 my-sidebar">
-			<div class="my-card-panel green lighten-2 white-text z-depth-2">
+			<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 				<h6>shuffle відео</h6>
 			</div>
 			@foreach ($sidebar_video_data  as $video)

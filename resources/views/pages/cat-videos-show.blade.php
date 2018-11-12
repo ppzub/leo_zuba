@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col xl12 l12 m12 s12">
 		@if($cat_video_data_show)
-		<div class="my-card-panel green lighten-2 white-text z-depth-2">
+		<div class="my-card-panel deep-purple lighten-2 white-text z-depth-2">
 			<h6>{{ $cat->title }}: відео</h6>
 		</div>
 		<div class="hide-on-med-and-up">

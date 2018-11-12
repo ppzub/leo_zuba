@@ -10,10 +10,10 @@
 		numVisible: 6,
 	});
 	$( '.my-hover' ).mouseover(function() {
-  		$( this ).addClass('green lighten-2 white-text');
+  		$( this ).addClass('deep-purple lighten-2 white-text');
 	});
 	$( '.my-hover' ).mouseout(function() {
-  		$( this ).removeClass('green lighten-2 white-text');
+  		$( this ).removeClass('deep-purple lighten-2 white-text');
 	});
 	$('.materialboxed').materialbox();
 

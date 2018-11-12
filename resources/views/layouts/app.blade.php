@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <meta property="fb:admins" content="100012346004318"/>
   <meta property="fb:admins" content="100002126122068"/>
-  
+
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <meta itemprop="name" content="kazka agency - музика на весілля"/>
   <meta itemprop="description" content="В нас є все, щоб зробити ваше весілля найкращим! Музика і ведучий на весілля, шоу-балет, декор, фото та відеозйомка"/>
   <meta itemprop="image" content="{{asset('images/small')}}/default_small.png"/>
@@ -40,7 +40,7 @@
 <!-- END NAVBAR -->
 <!-- Search bar for mobile -->
       <my-nav class="col m6 s12 hide-on-large-only my-search {{(Auth::check())? 'hide' : ''}}">
-        <div class="my-nav-wrapper green lighten-2">
+        <div class="my-nav-wrapper deep-purple lighten-2">
             <form method="GET" action="{{route('search')}}">
               <div class="input-field my-input-field">
                 <input name="key" id="search" type="search" required>
